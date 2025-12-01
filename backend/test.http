@@ -1,0 +1,51 @@
+### 1. 创建一条评论
+POST http://localhost:3000/api/comments
+Content-Type: application/json
+
+{
+  "workId": 1,
+  "userId": 1,
+  "content": "这是用 VS Code REST Client 发的第一条评论 😊"
+}
+
+###
+
+### 2. 获取这个作品的所有评论
+GET http://localhost:3000/api/comments/post/1
+
+###
+
+### 3. 删除一条评论（把 999 改成真实的评论 id）
+DELETE http://localhost:3000/api/comments/999
+Content-Type: application/json
+
+{
+  "userId": 1
+}
+
+### 获取所有作品
+GET http://localhost:3000/api/posts
+
+
+
+
+
+### 注册新用户
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "user1@example.com",
+  "password": "123456",
+  "nickname": "User1"
+}
+
+### 使用上面账号登录
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "user1@example.com",
+  "password": "123456"
+}
+
